@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  distance_from_cape_town: 1.5
+  location_url: MyString
+  shark_danger: MyString
+  description: MyText
+  image_url: MyString
+
+two:
+  name: MyString
+  distance_from_cape_town: 1.5
+  location_url: MyString
+  shark_danger: MyString
+  description: MyText
+  image_url: MyString
