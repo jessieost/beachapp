@@ -1,0 +1,25 @@
+<head>
+	<style type="text/css">
+	img {
+		height: 250px;
+		width: auto;
+		border-radius: 20%;
+	}
+	</style>
+
+</head>
+
+<h2><%= @beach.name %></h2>
+<p><img src="<%= @beach.image_url %>"></p>
+<p>Location: <%= @beach.location_url %></p>
+<p>Distance: <%= @beach.distance_from_cape_town %> km</p>
+<p>Description: <%= @beach.description %> </p>
+<p>Sharks????: <%= @beach.shark_danger %></p>
+
+<h4>Discussions </h4>
+
+<%= render @beach.discussions %>
+
+<%= render 'discussions/form' %>
+
+<p><%= link_to 'Back to Beaches', beaches_path %></p>

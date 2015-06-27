@@ -1,0 +1,25 @@
+<p>
+  <strong>Discussion:</strong>
+  <%= discussion.title %>
+</p>
+ 
+<p>
+  <strong>Visitor:</strong>
+  <%= discussion.user_name %>
+</p>
+
+<p>
+	<strong>Date of Visit:</strong>
+	<%= discussion.date_visited %>
+</p>
+
+<p>
+	<strong>Message:</strong>
+	<%= discussion.body %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Discussion', beach_discussion_path(discussion.beach,discussion),
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

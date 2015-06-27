@@ -1,0 +1,25 @@
+<%= form_for([@beach, @beach.discussions.build]) do |f| %>
+  
+  <p>
+    <%= f.label 'Your Name' %><br>
+    <%= f.text_field :user_name %>
+  </p>
+
+  <p>
+    <%= f.label 'Title Your New Discussion' %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label 'Date of visit' %><br>
+    <%= f.text_field :date_visited %>
+  </p>
+
+  <p>
+    <%= f.label 'Body' %><br>
+    <%= f.text_area :body, :placeholder => 'Use this area to provide details about your visit such as, sharks sightings, wave attributes, weather conditions, etc.' %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

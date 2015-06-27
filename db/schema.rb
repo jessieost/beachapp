@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150627182903) do
+ActiveRecord::Schema.define(version: 20150627205921) do
 
   create_table "beaches", force: :cascade do |t|
     t.string   "name"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 20150627182903) do
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.string   "surfability"
+  end
+
+  create_table "discussions", force: :cascade do |t|
+    t.string   "title"
+    t.string   "date_visited"
+    t.string   "user_name"
+    t.text     "body"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "beach_id"
   end
 
 end

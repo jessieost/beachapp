@@ -1,0 +1,12 @@
+<% @beaches.each do |beach| %>
+	<ul style="list-style-type: none;">
+		<li><%= link_to beach.name, beach_path(beach) %></li>
+		<li>| <%= link_to 'Edit', edit_beach_path(beach) %> | 
+		<%= link_to 'Destroy', beach_path(beach),
+			method: :delete,
+			data: { confirm: 'ARE YOU 100% SURE ABOUT THIS CHOICE YOU ARE MAKING??? If so then okay...' } %> |
+			 </li>
+		</ul>
+	<%end%>
+	
+	<div><%= link_to 'Add a Beach', new_beach_path %></div>

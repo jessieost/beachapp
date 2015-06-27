@@ -1,0 +1,47 @@
+<%= form_for @beach do |f| %>
+	<% if @beach.errors.any? %>
+		<div id="error explanation">
+		<h2> <%= pluralize(@beach.errors.count, 'error') %> caused this beach to not be saved:</h2>
+		<ul>
+			<% @beach.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	<%end%>
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+
+	<div>
+		<%= f.label :distance_from_cape_town %>
+		<%= f.text_field :distance_from_cape_town %>
+	</div>
+
+	<div>
+		<%= f.label 'Location' %>
+		<%= f.text_field :location_url %>
+	</div>
+
+	<div>
+		<%= f.label :shark_danger %>
+		<%= f.text_field :shark_danger %>
+	</div>
+
+	<div>
+		<%= f.label 'Beach Description' %>
+		<%= f.text_field :description %>
+	</div>
+
+	<div>
+		<%= f.label 'Image link (optional)' %>
+		<%= f.text_field :image_url %>
+	</div>
+
+	<div>
+		<%= f.label :surfability %>
+		<%= f.text_field :surfability %>
+	</div>
+
+	<%= f.submit %>
+	<% end %>
